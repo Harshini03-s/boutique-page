@@ -1,0 +1,200 @@
+/* General Styles */
+body {
+    background-image: url('https://content.jdmagicbox.com/comp/neyveli/b8/9999p4142.4142.221027211506.b5b8/catalogue/shalu-s-boutique-neyveli-1-neyveli-opa05l6edk.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;   
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: none;
+    padding: 20px 0;
+    color: none;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e91e63;
+}
+
+/* Contact Section */
+.contact {
+    background-color: none;
+    padding: 100px 0 60px;
+    color: #1f1f1f;
+    text-align: center;
+}
+
+.contact h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #333;
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #e91e63;
+}
+
+.btn {
+    background-color: #e91e63;
+    color: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #c2185b;
+}
+
+/* Flash Messages */
+.flashes {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.flashes li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.flashes .success {
+    background-color: #dff0d8;
+    color: #3c763d;
+}
+
+.flashes .error {
+    background-color: #f2dede;
+    color: #a94442;
+}
+
+/* Contact Info */
+.contact-info {
+    margin-top: 60px;
+    font-size: 18px;
+    color: white;
+}
+
+.contact-info h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #e91e63;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #1f1f1f;
+    padding: 40px 0;
+    text-align: center;
+    color: white;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.2);
+}
+
+

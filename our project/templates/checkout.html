@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Boutique</title>
+    <link rel="stylesheet" href="/static/css/checkout.css">
+    <script src="/static/js/checkout.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1>Order Summary</h1>
+    </header>
+    <main>
+        <div id="checkout-container">
+            <p>Your cart is currently empty.</p>
+        </div>
+        <button onclick="placeOrder()" class="btn-place-order">Place Order</button>
+    </main>
+
+    <form action="/checkout" method="POST">
+        <input type="submit" value="Proceed to Checkout">
+    </form>
+    
+    <script>
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const checkoutContainer = document.getElementById("checkout-container");
+
+        if (cart.length > 0) {
+            checkoutContainer.innerHTML = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${cart.map(item => `
+                            <tr>
+                                <td>${item.name}</td>
+                                <td>₹${item.price.toFixed(2)}</td>
+                                <td>${item.quantity}</td>
+                                <td>₹${(item.price * item.quantity).toFixed(2)}</td>
+                            </tr>
+                        `).join("")}
+                    </tbody>
+                </table>
+                <p>Total: ₹${cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2)}</p>
+            `;
+        } else {
+            checkoutContainer.innerHTML = `<p>Your cart is currently empty.</p>`;
+        }
+
+        function placeOrder() {
+            if (cart.length === 0) {
+                alert("Your cart is empty!");
+                return;
+            }
+
+            alert("Order placed successfully!");
+            localStorage.removeItem("cart"); // Clear the cart after placing the order
+            window.location.href = "shop.html"; // Redirect to the shop page
+        }
+    </script>
+</body>
+</html>

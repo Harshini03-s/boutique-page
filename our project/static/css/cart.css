@@ -1,0 +1,124 @@
+/* cart.css */
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Cart Container */
+#cart-container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #ecf0f1;
+}
+
+button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+button:focus {
+    outline: none;
+}
+
+p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Cart Buttons */
+.btn-clear-cart, .btn-checkout {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.btn-clear-cart:hover, .btn-checkout:hover {
+    background-color: #2980b9;
+}
+
+.btn-clear-cart {
+    margin-right: 20px;
+}
+
+#total-price {
+    font-size: 22px;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #cart-container {
+        width: 95%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .btn-clear-cart, .btn-checkout {
+        padding: 8px 16px;
+    }
+}

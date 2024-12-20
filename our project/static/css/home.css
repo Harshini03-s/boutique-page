@@ -1,0 +1,140 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #121212; /* Dark theme background */
+    color: #fff; /* Light text */
+    line-height: 1.8;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    background-color: #000; /* Dark header background */
+    padding: 20px 0;
+    overflow: auto; /* Clear floats */
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    float: left;
+}
+
+nav ul {
+    list-style: none;
+    float: right;
+    padding: 0;
+    margin: 0; /* Ensure no unwanted space */
+}
+
+nav ul li {
+    display: inline-block; /* Better compatibility */
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #e91e63; /* Accent color */
+    transition: color 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://blog.bibank.com/hubfs/dress.png') no-repeat center center;
+    height: 100vh; /* Use viewport height for better responsiveness */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content */
+    text-align: center;
+    color: #fff;
+    background-size: cover;
+}
+
+.hero-content {
+    padding: 20px; /* Optional spacing */
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Button Styles */
+.btn {
+    background-color: #e91e63; /* Pink accent */
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #c2185b;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0; /* Avoid extra space */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        padding: 20px; /* Add padding for smaller screens */
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    nav ul {
+        float: none;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}

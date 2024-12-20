@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lookbook - Boutique</title>
+    <link rel="stylesheet" href="/static/css/lookbook.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">Boutique</div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="\">Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Lookbook Section -->
+    <section class="lookbook">
+        <div class="container">
+            <h1>Our Lookbook</h1>
+            <p>Explore our curated collection of outfits and styles to inspire your next look.</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://m.media-amazon.com/images/I/61qv6LqCzIL._AC_UL480_FMwebp_QL65_.jpg" alt="Look 1">
+                    <div class="gallery-overlay">
+                        <h3>Look 1</h3>
+                        <p>Zeel Clothing Women's Sequins Thread Embroidered Georgette Semi Stitched Lehenga Choli With Dupatta (5124-Women-Lehenga-Choli-Latest)</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://m.media-amazon.com/images/I/71+OjNzZCAL._SY879_.jpg" alt="Look 2">
+                    <div class="gallery-overlay">
+                        <h3>Look 2</h3>
+                        <p>Indya Women's Kurta Set</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://m.media-amazon.com/images/I/6194qVgwjuL._SY879_.jpg" alt="Look 3">
+                    <div class="gallery-overlay">
+                        <h3>Look 3</h3>
+                        <p>Modern Minimal</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://m.media-amazon.com/images/I/61CBFYaORrL._SY879_.jpg" alt="Look 4">
+                    <div class="gallery-overlay">
+                        <h3>Look 4</h3>
+                        <p>BIBA Women synthetic a line Salwar Suit Set</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="{{ url_for('static', filename='img/look5.jpg') }}" alt="Look 5">
+                    <div class="gallery-overlay">
+                        <h3>Look 5</h3>
+                        <p>Street Style</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="{{ url_for('static', filename='img/look6.jpg') }}" alt="Look 6">
+                    <div class="gallery-overlay">
+                        <h3>Look 6</h3>
+                        <p>Classic Elegance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

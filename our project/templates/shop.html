@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Boutique</title>
+    <link rel="stylesheet" href="/static/css/shop.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">Boutique</div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="lookbook.html">Lookbook</a></li>
+                    
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html" id="cart-icon">
+                        🛒 <span id="cart-count">0</span>
+                    </a></li>
+                    <li><a href="\">Account</a></li>
+                </ul>
+            </nav>
+        </div>   
+    </header>
+
+    <!-- Shop Section -->
+    <main class="shop">
+        <div class="container">
+            <h1>Shop Our Collection</h1>
+            <div class="filters">
+                <label for="product-category">Filter by:</label>
+                
+                 <select id="product-category">
+                    <option value="all">All Products</option>
+                    <option value="women">Women</option>
+                    <option value="accessories">Accessories</option>
+                    <option value="new-arrivals">New Arrivals</option>
+                </select>
+                <label for="sort-order">Sort by:</label>
+                <select id="sort-order">
+                    <option value="default">Default</option>
+                    <option value="price-low-high">Price: Low to High</option>
+                    <option value="price-high-low">Price: High to Low</option>
+                    <option value="popularity">Popularity</option>
+                    <option value="newest">Newest</option>
+                </select>
+            </div>
+
+            <div id="productGrid" class="products-grid">
+        
+
+                <!-- Product 1 -->
+                <article class="product-card">
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.h-zjPBxaUJnLwQ5W9QsD5QHaJ4&pid=Api&P=0&h=180">
+                    <h3>Ethnic Rayon Aari Work Kurta Bottom Set</h3>
+                    <p class="price">
+                        <span class="original-price">₹799</span>
+                        <span class="discounted-price">₹689</span>
+                        <span class="discount">-10%</span>
+                    </p>
+                    <div class="quantity">
+                        <h4>Quantity:</h4>
+                        <button>-</button>
+                        <input type="text" value="1" aria-label="Product quantity">
+                        <button>+</button>
+                    </div>
+                    <div class="size-selection">
+                        <h4>Size:</h4>
+                        <button>S</button>
+                        <button>M</button>
+                        <button>L</button>
+                        <button>XL</button>
+                        <button>XXL</button>
+                    </div>
+                    <div class="actions">
+                        <a href="#" class="open-modal-btn">View Product</a>
+                    </div>
+                    <a href="#" class="btn add-to-cart" data-name="Ethnic Rayon Aari Work Kurta Bottom Set" data-price="689"  data-quantity="1"> Add to Cart</a>
+
+                    <a href="orders.html" class="btn">Buy Now</a>
+                </article>
+
+                <!-- Product 2 -->
+                <article class="product-card">
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.dF7DO2tZL2BrahKUZMIJoQAAAA&pid=Api&P=0&h=180" alt="Women Black Printed Ethnic Dress">
+                    <h3>Women Black Printed Ethnic Dress With Gotta Details</h3>
+                    <p class="price">
+                        <span class="original-price">₹999</span>
+                        <span class="discounted-price">₹929</span>
+                        <span class="discount">-7%</span>
+                    </p>
+                    <p class="stock-status">Currently out of Stock</p>
+                    <div class="quantity">
+                        <h4>Quantity:</h4>
+                        <button>-</button>
+                        <input type="text" value="1" aria-label="Product quantity">
+                        <button>+</button>
+                    </div>
+                    <div class="size-selection">
+                        <h4>Size:</h4>
+                        <button>S</button>
+                        <button>M</button>
+                        <button>L</button>
+                        <button>XL</button>
+                        <button>XXL</button>
+                    </div>
+                    
+
+                    <div class="actions">
+                        <a href="#" class="open-modal-btn">View Product</a>
+                    </div>
+                    <a href="#" class="btn add-to-cart" data-name="Ethnic Rayon Aari Work Kurta Bottom Set" data-price="689" data-quantity="1">Add to Cart</a>
+
+                    <!--<a href="orders.html" class="btn">Buy Now</a>-->
+                    <a href="#" class="btn buy-now"  data-name="Ethnic Rayon Aari Work Kurta Bottom Set" data-price="689" data-image="https://tse4.mm.bing.net/th?id=OIP.h-zjPBxaUJnLwQ5W9QsD5QHaJ4&pid=Api&P=0&h=180">Buy Now</a>
+
+                </article>
+
+                <!-- Additional Product Cards... -->
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Popup -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" aria-label="Close modal">&times;</span>
+            <h2>Ethnic Rayon Aari Work Kurta Bottom Set</h2>
+            <img src="https://tse4.mm.bing.net/th?id=OIP.h-zjPBxaUJnLwQ5W9QsD5QHaJ4&pid=Api&P=0&h=180" alt="Kurta Set" style="width: 200px;">
+            <p>Price: ₹799</p>
+            <p>Size: XL</p>
+            <a href="orders.html" class="btn">Buy Now</a>
+        </div>
+    </div>
+
+
+    <script src="/static/js/popup.js"></script>
+    <script src="/static/js/cart.js"></script>
+    <script src="/static/js/buynow.js"></script>
+    <script src="/static/js/filter.js"></script>
+    <script src="/static/js/orders.js"></script>
+
+</body>
+</html>

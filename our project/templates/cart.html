@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Boutique</title>
+    <link rel="stylesheet" href="/static/css/cart.css">
+</head>
+<body>
+    <header>
+        <h1>Your Cart</h1>
+    </header>
+    <main>
+        <div id="cart-container">
+            <p>Your cart is currently empty.</p>
+        </div>
+    </main>
+
+    <script>
+        // Load the cart from localStorage
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const cartContainer = document.getElementById("cart-container");
+
+        // If the cart has items, display them
+        if (cart.length > 0) {
+            cartContainer.innerHTML = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${cart.map((item, index) => `
+                            <tr>
+                                <td>${item.name}</td>
+                                <td>₹${item.price.toFixed(2)}</td>
+                                <td>${item.quantity}</td>
+                                <td>₹${(item.price * item.quantity).toFixed(2)}</td>
+                                <td><button onclick="removeFromCart(${index})">Remove</button></td>
+                            </tr>
+                        `).join("")}
+                    </tbody>
+                </table>
+                <p>Total: ₹${cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2)}</p>
+            `;
+        } else {
+            cartContainer.innerHTML = `<p>Your cart is currently empty.</p>`;
+        }
+
+        // Function to remove an item from the cart
+        function removeFromCart(index) {
+            cart.splice(index, 1); // Remove the item at the specified index
+            localStorage.setItem("cart", JSON.stringify(cart)); // Save the updated cart to localStorage
+            window.location.reload(); // Refresh the page to update the UI
+        }
+        function clearCart() {
+            localStorage.removeItem("cart");
+            window.location.reload();
+        }
+        
+
+    </script>
+   <center> <p>Total: ₹<span id="total-price"></span></p></center>
+<center><button onclick="clearCart()" class="btn-clear-cart">Clear Cart</button></center>
+<center><button onclick="checkout()" class="btn-checkout">Proceed to Checkout</button></center>
+<center><p><a href="shop.html">Go Back </a></p></center>
+
+
+<script src="/static/js/cart.js"></script>
+
+
+</body>
+</html>

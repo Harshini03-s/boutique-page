@@ -1,0 +1,89 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #121212; /* Dark background */
+    color: #fff; /* Light text color for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px;
+}
+
+/* Header */
+header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 24px;
+}
+
+/* Logout Page Styles */
+.logout-page {
+    background-color: #333;
+    padding: 50px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Title Styles */
+.logout-page h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #e91e63; /* Pink accent color */
+}
+
+/* Paragraph Styles */
+.logout-page p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Link Styles */
+.logout-page a {
+    color: #e91e63;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.logout-page a:hover {
+    color: #c2185b; /* Darker pink on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logout-page {
+        padding: 40px 20px;
+    }
+
+    .logout-page h1 {
+        font-size: 28px;
+    }
+
+    .logout-page p {
+        font-size: 16px;
+    }
+
+    .logout-page a {
+        font-size: 14px;
+    }
+}

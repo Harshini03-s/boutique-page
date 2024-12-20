@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Boutique</title>
+    <link rel="stylesheet" href="/static/css/contact.css">
+</head>
+<body>
+
+    <p style="background-image: url('https://content.jdmagicbox.com/comp/neyveli/b8/9999p4142.4142.221027211506.b5b8/catalogue/shalu-s-boutique-neyveli-1-neyveli-opa05l6edk.jpg');">
+ 
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">Boutique</div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="lookbook.html">Lookbook</a></li>
+                    
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="\">Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>If you have any questions or need further information, feel free to reach out to us.</p>
+            
+            {% with messages = get_flashed_messages(with_categories=true) %}
+              {% if messages %}
+                <ul class="flashes">
+                  {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            {% endwith %}
+
+            <div class="contact-form">
+                <form action="{{ url_for('contact') }}" method="post">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <h2>Our Store</h2>
+                <p><b>Shalu's boutique, NRB-072, MAIN BAZAR, 2/5, Neyveli T.S, Tamil Nadu 607801</b></p>
+                <p><b>Email: contact@shalusbotique.com</b></p>
+                <p><b>Phone: 8838693929</b></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">Boutique</div>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/shalus_boutique"><img src="instagram-logo.png" alt="Instagram"></a>
+                <a href="https://m.facebook.com/ShalusBotique"><img src="facebook-logo.png" alt="Facebook"></a>
+                <a href="https://www.youtube.com/@shalusbotique"><img src="youtube-logo.png" alt="YouTube"></a>
+            </div>
+        </div>
+    </footer>
+    <script src="/static/js/contact.js"></script>
+
+</body>
+</html>
+
+

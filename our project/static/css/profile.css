@@ -1,0 +1,178 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e; /* Dark theme */
+    color: #f5f5f5; /* Light text */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 24px;
+    color: #f5f5f5;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #ff4dab; /* Pink accent */
+}
+
+/* Flash Messages */
+.flash-messages {
+    padding: 10px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.alert {
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.alert-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.alert-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* User Account Section */
+.user-account {
+    padding: 50px 0;
+}
+
+h1, h2 {
+    color: #ff4dab; /* Pink accent */
+    text-align: center; /* Center align headers */
+}
+
+.account-details {
+    display: flex; /* Use flexbox to align sidebar and content */
+    flex-wrap: wrap;
+    gap: 20px; /* Add a gap between sidebar and content */
+}
+
+.account-sidebar {
+    flex: 1;
+    max-width: 250px; /* Ensure enough space for the sidebar */
+}
+
+.account-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.account-sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.account-sidebar ul li a {
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    background-color: #333;
+    color: #f5f5f5;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.account-sidebar ul li a.active, 
+.account-sidebar ul li a:hover {
+    background-color: #ff4dab;
+    color: #1e1e1e; /* Dark background for active */
+}
+
+.account-content {
+    flex: 3;
+    padding: 20px;
+    background-color: #2e2e2e;
+    border-radius: 5px;
+    max-width: 800px; /* Limit width of the content */
+    margin: 0 auto; /* Center the content */
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #f5f5f5;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #f5f5f5;
+    transition: border 0.3s ease; /* Smooth transition for border */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+    outline: none;
+    border: 2px solid #ff4dab; /* Pink border on focus */
+}
+
+button[type="submit"] {
+    background-color: #ff4dab;
+    color: #1e1e1e;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Add spacing above the submit button */
+}
+
+button[type="submit"]:hover {
+    background-color: #e03e90; /* Lighter pink on hover */
+}

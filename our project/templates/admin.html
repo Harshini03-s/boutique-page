@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Account - Boutique</title>
+    <link rel="stylesheet" href="/static/css/account.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">Boutique</div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="lookbook.html">Lookbook</a></li>
+                    
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- User Account Section -->
+    <section class="user-account">
+        <div class="container">
+            <h1>My Account</h1>
+            <div class="account-details">
+                <div class="account-sidebar">
+                    <ul>
+                        <li><a href="profile.html" class="active">Profile</a></li><br>
+                        <li><a href="orders.html">Orders</a></li><br>
+                        <li><a href="wishlist.html">Wishlist</a></li><br>
+                        <li><a href="settings.html">Settings</a></li><br>
+                        <li><a href="logout.html">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="account-content">
+                    <h2>Profile Information</h2>
+                    <form action="/account" method="post">
+                        <div class="form-group">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="first-name" value="" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" name="last-name" value="" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" value="" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" value="" required>
+                        </div>
+                        <button type="submit" class="btn">Update Profile</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/static/js/account.js"></script>
+
+</body>
+</html>
+
